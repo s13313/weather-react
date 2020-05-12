@@ -1,21 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import './index.css';
-import Form from './components/form';
-import Weather from './components/getWeather';
-const Api = '6e7e23b41e6570748e2fed6fa094b242';
+import Form from './components/Form';
+// import Weather from './components/Weather';
 
 function App() {
+  const [city, setCity] = useState('Vienna');
+  const [weather, setWeather] = useState({});
+
+  const api = {
+    key: '',
+  };
+  useEffect(function getWeather() {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${api.key}
+  `)
+      .then((res) => res.json())
+      .then((result) => {
+        setWeather(result);
+        console.log(result);
+      });
+  }, []);
+
+  //this return weather infos to App.js
+
   return (
     <div className="App">
       <header className="App-header">
         Write down your city name to get current weather
         <br />
         <br />
-        <Form />
+        <div>here come</div>
+        <Form city={city} setCity={setCity} />
         <br />
-        <Weather /> {/*Here comes the weather */}
+        <div>weather is </div>
+        {/* <Weather /> Here comes the weather */}
       </header>
     </div>
   );
