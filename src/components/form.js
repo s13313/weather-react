@@ -1,37 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../index.css';
 
 function Form(props) {
+  const onChangeCity = (event) => {
+    // Step 2: Update the value with whatever the user types in the box
+    props.setCity(event.target.value);
+  };
+
   return (
-    <form
-      onSubmit={(event) => {
-        alert(`${props.city} `);
-        return props.city;
-        event.preventDefault();
-      }}
-    >
+    <div>
       <div>
         <input
           className="input"
           type="text"
           placeholder="Type your city name here"
           value={props.city}
-          onChange={(event) => {
-            props.setCity(event.target.value);
-          }}
+          onChange={onChangeCity}
         />
       </div>
-
-      <button
-        className="button"
-        type="submit"
-        onClick={() => {
-          return props.city;
-        }}
-      >
-        Submit
-      </button>
-    </form>
+    </div>
   );
 }
 
