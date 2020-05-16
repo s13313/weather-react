@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-image: url('https://store.api.pelmorex.com/static/media/TWNHeroBanner.578042f0.jpg');
 }
 
 .App-logo {
@@ -14,25 +15,25 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
+  color: rgb(0, 0, 0);
 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.9;
+  background-image: ;
+}
+.Div {
+  font-size: 3em;
+}
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

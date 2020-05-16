@@ -5,17 +5,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  box-shadow: 0 12px 16px 0 rgba(89, 15, 15, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.input {
+  width: 100%;
+  align-self: center;
+  padding: 15px 10px;
+  margin: 15px 0;
+  box-sizing: border-box;
+}
+
 .button {
-  background-color: #4caf50; /* Green */
+  background-color: #5e0c0c;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 20px 70px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -27,10 +39,46 @@ code {
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.input {
-  width: 100%;
-  padding: 12px 10px;
-  margin: 10px 0;
+.select-css {
+  display: block;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #444;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  width: 40%;
+  max-width: 100%;
   box-sizing: border-box;
-  border: 2px solid blue;
+  margin: 0;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: 0.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+}
+.select-css::-ms-expand {
+  display: none;
+}
+.select-css:hover {
+  border-color: #888;
+}
+.select-css:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222;
+  outline: none;
+}
+.select-css option {
+  font-weight: normal;
+}
+
+.diving {
+  display: flex;
 }
