@@ -24,10 +24,9 @@ export default function App() {
         const weatherMain = result.main;
         const weatherSkys = result.weather[0];
 
-        setCity('');
         setWeather(weatherMain);
         setWeatherSky(weatherSkys);
-        // console.log(result);
+        console.log(result);
       });
     alert(`Get ready to see today's weather in ${city}?!`);
     showDiv();
@@ -64,9 +63,17 @@ export default function App() {
           Submit
         </button>
         <div className="Answer">
-          <div style={{ display: showInfo }}>
-            weather is bla bla
-            {weatherSky.description}
+          <div style={{ display: showInfo, color: 'white' }}>
+            {city}'s weather: <br /> {weatherSky.description}
+            <br />
+            Current temperture: {weather.temp}°C.
+            <br />
+            Feeling like: {weather.feels_like} °C
+            <br />
+            Lowest temperture:{weather.temp_max}
+            <br />
+            Highest temperture:{weather.temp_min}
+            <br />
           </div>
         </div>
       </header>
