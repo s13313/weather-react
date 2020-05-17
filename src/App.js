@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import './index.css';
-import Form from './components/Form';
+import Form from './Form';
 
 export default function App() {
   const [city, setCity] = useState('');
