@@ -70,9 +70,9 @@ export default function App() {
             <br />
             Feeling like: {weather.feels_like} °C
             <br />
-            Lowest temperture:{weather.temp_max}
+            Highest temperture:{weather.temp_max} °C
             <br />
-            Highest temperture:{weather.temp_min}
+            Lowest temperture:{weather.temp_min} °C
             <br />
           </div>
         </div>
