@@ -52,7 +52,7 @@ export default function App() {
   //   [api.key, api.base, city],
   // );
   return (
-    <>
+    <div className="App">
       <header className="App-header">
         <h3>
           Hamed's Weather App <hr />
@@ -98,8 +98,6 @@ export default function App() {
           </div>
         </div>
       </header>
-
-      <header />
-    </>
+    </div>
   );
 }
