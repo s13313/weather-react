@@ -9,15 +9,13 @@ function Form(props) {
 
   return (
     <div>
-      <div>
-        <input
-          className="input"
-          type="text"
-          placeholder="Type your city name here"
-          value={props.city}
-          onChange={onChangeCity}
-        />
-      </div>
+      <input
+        className="input"
+        type="text"
+        placeholder="Type your city name here"
+        value={props.city}
+        onChange={onChangeCity}
+      />
     </div>
   );
 }
